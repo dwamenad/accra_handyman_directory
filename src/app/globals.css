@@ -1,0 +1,102 @@
+:root {
+  --bg: #f7f5ef;
+  --surface: #ffffff;
+  --text: #102025;
+  --muted: #536066;
+  --brand: #0d6a50;
+  --brand-2: #f2a93b;
+  --danger: #b3312d;
+  --border: #d8d8d0;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 20% 10%, #fff8df, var(--bg));
+  color: var(--text);
+}
+
+.container {
+  width: min(1060px, 92vw);
+  margin: 0 auto;
+}
+
+.nav-wrap {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 62px;
+}
+
+.brand { font-weight: 800; color: var(--text); text-decoration: none; }
+.nav-links { display: flex; gap: 14px; align-items: center; }
+.nav-links a, .linklike {
+  text-decoration: none;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+h1, h2, h3 { line-height: 1.2; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 18px rgba(16, 32, 37, 0.04);
+}
+
+.grid { display: grid; gap: 12px; }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font: inherit;
+}
+
+button, .btn {
+  background: var(--brand);
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-secondary {
+  background: var(--brand-2);
+  color: #1d1a13;
+}
+
+.badges { display: flex; gap: 8px; flex-wrap: wrap; }
+.badge {
+  font-size: 0.75rem;
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #f4f7f7;
+}
+
+.kpi { font-size: 1.8rem; font-weight: 800; }
+.small { color: var(--muted); font-size: 0.9rem; }
+.row { display: flex; gap: 8px; align-items: center; }
+
+@media (max-width: 760px) {
+  .nav { flex-direction: column; align-items: flex-start; padding: 10px 0; }
+}
