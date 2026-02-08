@@ -70,10 +70,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Seeded Admin
-
-- Phone: `+233000000001`
-- Password: `admin1234`
 
 ## Notes
 
