@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getSession } from "@/lib/auth";
 
@@ -8,8 +9,16 @@ export async function Nav() {
   return (
     <header className="nav-wrap">
       <nav className="container nav">
-        <Link href="/" className="brand">
-          Accra Handyman
+        <Link href="/" className="brand brand-wrap">
+          <Image
+            src="/AccraHandyFindLogo.png"
+            alt="Accra Handy Find"
+            width={40}
+            height={40}
+            className="brand-logo"
+            priority
+          />
+          <span className="brand-text">Accra Handy Find</span>
         </Link>
         <div className="nav-links">
           <Link href="/search">Find</Link>
